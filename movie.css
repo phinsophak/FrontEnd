@@ -1,0 +1,685 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+body{
+    background-color: rgb(43, 43, 43);
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.container{
+    width: 100%;
+}
+.navbar{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.navbar>.logo{
+    width: 50%;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+.navbar>.logo>input{
+    width: 200px;
+    height: 30px;
+    margin-left: 50px;
+    background-color: rgba(129, 129, 129, 0.329);
+    border: none;
+    border-radius: 45px;
+    padding: 2px 25px;
+    color: white;
+}
+.navbar>.logo>i:nth-child(2){
+    font-size: 15px;
+    color: rgba(156, 155, 155, 0.541);
+    transform: translate(85px);
+}
+.navbar>.logo>input:focus{
+    outline: none;
+
+}
+.navbar>.menu{
+    width: 50%;
+    text-align: end;
+    /* margin-left: 10px; */
+}
+.navbar>.menu>a{
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 16px;
+    color: white;
+}
+.navbar>.menu>a:hover{
+    border-bottom: 2px solid white;
+}
+
+.banner{
+    width: 100%;
+    height: 93vh;
+    position: relative;
+    
+}
+.banner>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* .banner>video{ */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* object-fit: cover; */
+/* } */
+.banner>.des{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* z-index: 100; */
+    padding-left: 200px;
+    padding-top: 250px;
+    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.219), black);
+}
+.banner>.des>h2{
+    font-size: 40px;
+    color: white;
+}
+.banner>.des>p{
+    font-size: 20px;
+    color: white;
+    margin-top: 40px;
+    line-height: 5px;
+}
+.banner>.des>span{
+    font-size: 20px;
+    color: white;
+}
+.banner>.des>button{
+    width: 120px;
+    height: 40px;
+    border-radius: 50px;
+    color: white;
+    border: 2px solid white;
+    margin-top: 30px;
+    box-shadow: 0 0 5px white;
+    background-color: transparent;
+    /* cursor: pointer; */
+}
+.banner>.des>button:hover{
+    border-color:2px solid black;
+    /* box-shadow: 0 0 5px black; */
+    color: black;
+    background-color: white;
+}
+.content{
+    width: 95%;
+    min-height: 100vh;
+    margin: auto;
+    color: white;
+    /* padding: 10px; */
+}
+.content>h3{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 30px;
+}
+.content>h2{
+    font-size: 19px;
+    font-weight: 300;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+/* ---------------------> Popular <---------------------- */
+
+.content>.popular{
+    width: 100%;
+    height: 230px;
+    /* background-color: cadetblue; */
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+.content>.popular::-webkit-scrollbar{
+    display: none;
+}
+.content>.popular>.card{
+    width: 280px;
+    height: 100%;
+    background-color: rgba(82, 81, 81, 0.74);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    /* padding: 10px; */
+    transition: transform ease 0.3s;
+}
+.content>.popular>.card:hover{
+    transform: scale(1.04);
+}
+.content>.popular>.card>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.content>.popular>.card>.status{
+    min-width: 50px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 0 0 5px 0;
+    position: absolute;
+    padding: 0 4px;
+}
+.content>.popular>.card>a>img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+.content>.popular>.card>a>p{
+    font-size: 15px;
+    color: white;
+    margin: 10px 5px;
+}
+
+/* --------------------------> Most Watched <-------------------- */
+
+.content>.most-watched{
+    width: 100%;
+    height: 230px;
+    /* background-color: cadetblue; */
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+.content>.most-watched::-webkit-scrollbar{
+    display: none;
+}
+.content>.most-watched>.card{
+    width: 280px;
+    height: 100%;
+    background-color: rgba(82, 81, 81, 0.74);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    /* padding: 10px; */
+    transition: transform ease 0.3s;
+}
+.content>.most-watched>.card:hover{
+    transform: scale(1.04);
+}
+.content>.most-watched>.card>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.content>.most-watched>.card>.status{
+    min-width: 50px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 0 0 5px 0;
+    position: absolute;
+    padding: 0 4px;
+}
+.content>.most-watched>.card>a>img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+.content>.most-watched>.card>a>p{
+    font-size: 15px;
+    color: white;
+    margin: 10px 5px;
+}
+
+
+/* -------------------> Trending <--------------------------- */
+
+.content>.trending{
+    width: 100%;
+    height: 230px;.content>.trending{
+    width: 100%;
+    height: 230px;
+    /* background-color: cadetblue; */
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+.content>.trending::-webkit-scrollbar{
+    display: none;
+}
+.content>.trending>.card{
+    width: 280px;
+    height: 100%;
+    background-color: rgba(82, 81, 81, 0.74);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    /* padding: 10px; */
+    transition: transform ease 0.3s;
+}
+.content>.trending>.card:hover{
+    transform: scale(1.04);
+}
+.content>.trending>.card>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.content>.trending>.card>.status{
+    min-width: 50px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 0 0 5px 0;
+    position: absolute;
+    padding: 0 4px;
+}
+.content>.trending>.card>a>img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+.content>.trending>.card>a>p{
+    font-size: 15px;
+    color: white;
+    margin: 10px 5px;
+}
+    /* background-color: cadetblue; */
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+.content>.trending::-webkit-scrollbar{
+    display: none;
+}
+.content>.trending>.card{
+    width: 280px;
+    height: 100%;
+    background-color: rgba(82, 81, 81, 0.74);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    /* padding: 10px; */
+    transition: transform ease 0.3s;
+}
+.content>.trending>.card:hover{
+    transform: scale(1.04);
+}
+.content>.trending>.card>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.content>.trending>.card>.status{
+    min-width: 50px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 0 0 5px 0;
+    position: absolute;
+    padding: 0 4px;
+}
+.content>.trending>.card>a>img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+.content>.trending>.card>a>p{
+    font-size: 15px;
+    color: white;
+    margin: 10px 5px;
+}
+
+/* --------> Sports documentaries and series <-------- */
+
+.content>.sportdocument{
+    width: 100%;
+    height: 350px;
+    /* background-color: cadetblue; */
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+.content>.sportdocument::-webkit-scrollbar{
+    display: none;
+}
+.content>.sportdocument>.card{
+    width: 230px;
+    height: 100%;
+    background-color: rgba(82, 81, 81, 0.74);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    /* padding: 10px; */
+    transition: transform ease 0.3s;
+}
+.content>.sportdocument>.card:hover{
+    transform: scale(1.04);
+}
+.content>.sportdocument>.card>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.content>.sportdocument>.card>.status{
+    min-width: 50px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 0 0 5px 0;
+    position: absolute;
+    padding: 0 4px;
+}
+.content>.sportdocument>.card>a>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content>.sportdocument>.card>a>p{
+    font-size: 15px;
+    color: white;
+    margin: 10px 5px;
+}
+
+
+/* ------------------> Top-Rate <-------------------- */
+
+.content>.top-rated{
+    width: 100%;
+    height: 230px;
+    /* background-color: cadetblue; */
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+.content>.top-rated::-webkit-scrollbar{
+    display: none;
+}
+.content>.top-rated>.card{
+    width: 280px;
+    height: 100%;
+    background-color: rgba(82, 81, 81, 0.74);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    /* padding: 10px; */
+    transition: transform ease 0.3s;
+}
+.content>.top-rated>.card:hover{
+    transform: scale(1.04);
+}
+.content>.top-rated>.card>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.content>.top-rated>.card>.status{
+    min-width: 50px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 0 0 5px 0;
+    position: absolute;
+    padding: 0 4px;
+}
+.content>.top-rated>.card>a>img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+.content>.top-rated>.card>a>p{
+    font-size: 15px;
+    color: white;
+    margin: 10px 5px;
+}
+
+
+/* ----------------> Drama TV <------------------------ */
+
+
+.content>.horror{
+    width: 100%;
+    height: 230px;
+    /* background-color: cadetblue; */
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+.content>.horror::-webkit-scrollbar{
+    display: none;
+}
+.content>.horror>.card{
+    width: 280px;
+    height: 100%;
+    background-color: rgba(82, 81, 81, 0.74);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    /* padding: 10px; */
+    transition: transform ease 0.3s;
+}
+.content>.horror>.card:hover{
+    transform: scale(1.04);
+}
+.content>.horror>.card>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.content>.horror>.card>.status{
+    min-width: 50px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 0 0 5px 0;
+    position: absolute;
+    padding: 0 4px;
+}
+.content>.horror>.card>a>img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+.content>.horror>.card>a>p{
+    font-size: 15px;
+    color: white;
+    margin: 10px 5px;
+}
+
+
+/* ----------------> Anime Tv <------------------------ */
+
+
+.content>.anime{
+    width: 100%;
+    height: 230px;
+    /* background-color: cadetblue; */
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+.content>.anime::-webkit-scrollbar{
+    display: none;
+}
+.content>.anime>.card{
+    width: 280px;
+    height: 100%;
+    background-color: rgba(82, 81, 81, 0.74);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    /* padding: 10px; */
+    transition: transform ease 0.3s;
+}
+.content>.anime>.card:hover{
+    transform: scale(1.04);
+}
+.content>.anime>.card>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.content>.anime>.card>.status{
+    min-width: 50px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 0 0 5px 0;
+    position: absolute;
+    padding: 0 4px;
+}
+.content>.anime>.card>a>img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+.content>.anime>.card>a>p{
+    font-size: 15px;
+    color: white;
+    margin: 10px 5px;
+}
+
+
+/* ----------------> Recently Added <------------------------ */
+
+
+.content>.recently{
+    width: 100%;
+    height: 230px;
+    /* background-color: cadetblue; */
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+.content>.recently::-webkit-scrollbar{
+    display: none;
+}
+.content>.recently>.card{
+    width: 280px;
+    height: 100%;
+    background-color: rgba(82, 81, 81, 0.74);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    /* padding: 10px; */
+    transition: transform ease 0.3s;
+}
+.content>.recently>.card:hover{
+    transform: scale(1.04);
+}
+.content>.recently>.card>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.content>.recently>.card>.status{
+    min-width: 50px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 0 0 5px 0;
+    position: absolute;
+    padding: 0 4px;
+}
+.content>.recently>.card>a>img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+.content>.recently>.card>a>p{
+    font-size: 15px;
+    color: white;
+    margin: 10px 5px;
+}
